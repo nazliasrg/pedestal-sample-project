@@ -1,7 +1,5 @@
 # pedestal-sample-project
 
-FIXME
-
 ## Getting Started
 
 1. Start the application: `lein run`
