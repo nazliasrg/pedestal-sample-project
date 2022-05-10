@@ -10,22 +10,24 @@
   [:div {:id "form-project" :class "sixteen columns alpha omega"}
    (hcp-form/form-to [:post "/"]
                      [:div
-                      {:class "form-group"}
+                      {:class "card p-5 form-group"}
                       (anti-forgery/anti-forgery-field)
-                      (hcp-form/label "f" "Masukkan data yang ingin ditambahkan!") [:br]
-                      (hcp-form/text-area {:class "form-control"} "f" ) [:br]
-                      (hcp-form/submit-button {:class "btn btn-primary"} "Tambah Data")]
+                      (hcp-form/label "f" "Masukkan data yang ingin ditambahkan!")
+                      (hcp-form/text-area {:class "form-control mt-2"} "f")
+                      (hcp-form/submit-button {:class "btn btn-primary mt-2"} "Tambah Data")]
                  )])
 
 
 (defn display-index 
   [forms]
-  [:div {:class "card"
-         :style {:width "100px"}}
-   [:ul {:class "list-group list-group-flush"}
+  [:div 
     (map
-     (fn [f] [:li {:class "list-group-item text-center bg-light"} (h (:body f))])
-     forms)]
+     (fn [f] [:div {:class "card mt-2"}
+              [:div {:class "card-header"}
+               [:small 
+                [:strong (str "ID : " (h (:id f)))]]]
+              [:div {:class "card-body text-center"} (h (:body f))]])
+     forms)
    ])
 
 (defn index 
@@ -34,5 +36,5 @@
                   [:div {:class "mt-5 text-center"}
                    [:h1 "Pedestal Sample Project"]]
                   [:center (form-format)]
-                  [:div {:class "mt-5"}]
+                  [:div {:class "mt-4"}]
                   (display-index forms)))

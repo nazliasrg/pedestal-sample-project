@@ -30,7 +30,7 @@
              :crossorigin "anonymous"}]))
 
 (defn layouts
-  [title headers & body]
+  [title headers inputan & body]
   (ring-resp/response (hcp-page/html5
                        {:lang "en"}
                        (hcp-core/html
@@ -38,19 +38,21 @@
                         [:head (header-components title)]
 
                         [:body
-                         [:div#header
-                          {:class "container"
-                           :style {:margin-top 50}}
+                         [:div
+                          {:class "container"}
                           headers]
                          [:br]
                          [:div 
                           {:class "container"}
-                          body
-                          
+                          [:div {:class "row"}
+                           [:div {:class "col-md-2"}]
+                           [:div {:class "col-md-8"}
+                            inputan]
+                           [:div {:class "col-md-2"}]]
+                          [:div {:class "row mt-4"}
+                           [:div {:class "col-md-1"}]
+                           [:div {:class "col-md-10"}
+                            body]
+                           [:div {:class "col-md-1"}]]
                           (script-components)]
                          ]))))
-
-(defn four-oh-four []
-  (layouts "Page Not Found"
-          [:div {:id "four-oh-four"}
-           "The page you requested could not be found"]))

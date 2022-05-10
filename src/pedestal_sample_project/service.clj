@@ -5,9 +5,19 @@
             [ring.util.response :as ring-resp]
             [pedestal-sample-project.views.index :as view]
             [pedestal-sample-project.models.models :as model]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            [io.pedestal.interceptor :as interceptor]
+            [cheshire.core :as json]))
+
 
 (defn about-page
+  [request]
+  (ring-resp/response (format "Clojure %s - served from %s"
+                              (clojure-version)
+                              (route/url-for ::about-page))))
+
+
+(defn about-page2
   [request]
   (ring-resp/response (format "Clojure %s - served from %s"
                               (clojure-version)
@@ -17,21 +27,42 @@
   [request]
   (view/index (model/all)))
 
+(def content-length-json-body
+  (interceptor/interceptor
+   {:name ::content-length-json-body
+    :leave (fn [context]
+             (let [response (:response context)
+                   body (:body response)
+                   json-response-body (if body (json/generate-string body) "")
+                    ;; Content-Length is the size of the response in bytes
+                    ;; Let's count the bytes instead of the string, in case there are unicode characters
+                   content-length (count (.getBytes ^String json-response-body))
+                   headers (:headers response {})]
+               (assoc context
+                      :response {:status (:status response)
+                                 :body json-response-body
+                                 :headers (merge headers
+                                                 {"Content-Type" "application/json;charset=UTF-8"
+                                                  "Content-Length" (str content-length)})})))}))
+
 (defn create
   [f]
-  (when-not (str/blank? f)
-    (model/create f))
-  (ring-resp/redirect "/"))
+  ;; (ring-resp/response (str ((vec (vals (:form-params f))) 1)))
+  (when-not (str/blank? (str ((vec (vals (:form-params f))) 1)))
+    (model/create (str (str ((vec (vals (:form-params f))) 1)))))
+  (ring-resp/redirect "/")
+  )
 
 ;; Defines "/" and "/about" routes with their associated :get handlers.
 ;; The interceptors defined after the verb map (e.g., {:get home-page}
 ;; apply to / and its children (/about).
 (def common-interceptors [(body-params/body-params) http/html-body])
+(def custom-interceptors [(body-params/body-params) content-length-json-body])
 
 ;; Tabular routes
-;; (def routes #{["/" :get (conj common-interceptors `home-page)]
-;;               ["/about" :get (conj common-interceptors `about-page)]
-;;               ["/" :post `create]})
+(def routes #{["/" :get (conj common-interceptors `home-page)]
+              ["/about" :get (conj common-interceptors `about-page)]
+              ["/" :post (conj custom-interceptors `create)]})
 
 ;; Map-based routes
 ;(def routes `{"/" {:interceptors [(body-params/body-params) http/html-body]
@@ -39,11 +70,11 @@
 ;                   "/about" {:get about-page}}})
 
 ;; Terse/Vector-based routes
-(def routes
-  `[[["/" {:get home-page}
-      ^:interceptors [(body-params/body-params) http/html-body]
-      ["/about" {:get about-page}]
-      ["/" {:post create}]]]])
+;; (def routes
+;;   `[[["/" {:get home-page}
+;;       ^:interceptors [(body-params/body-params) http/html-body]
+;;       ["/about" {:get about-page}]
+;;       ["/" {:post create}]]]])
 
 
 ;; Consumed by pedestal-sample-project.server/create-server
