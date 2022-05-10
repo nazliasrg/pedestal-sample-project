@@ -39,7 +39,8 @@
 
                         [:body
                          [:div#header
-                          {:class "container"}
+                          {:class "container"
+                           :style {:margin-top 50}}
                           headers]
                          [:br]
                          [:div 

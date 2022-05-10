@@ -2,7 +2,10 @@
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
             [io.pedestal.http.body-params :as body-params]
-            [ring.util.response :as ring-resp]))
+            [ring.util.response :as ring-resp]
+            [pedestal-sample-project.views.index :as view]
+            [pedestal-sample-project.models.models :as model]
+            [clojure.string :as str]))
 
 (defn about-page
   [request]
@@ -12,7 +15,13 @@
 
 (defn home-page
   [request]
-  (ring-resp/response "Hello World!"))
+  (view/index (model/all)))
+
+(defn create
+  [f]
+  (when-not (str/blank? f)
+    (model/create f))
+  (ring-resp/redirect "/"))
 
 ;; Defines "/" and "/about" routes with their associated :get handlers.
 ;; The interceptors defined after the verb map (e.g., {:get home-page}
@@ -20,8 +29,9 @@
 (def common-interceptors [(body-params/body-params) http/html-body])
 
 ;; Tabular routes
-(def routes #{["/" :get (conj common-interceptors `home-page)]
-              ["/about" :get (conj common-interceptors `about-page)]})
+;; (def routes #{["/" :get (conj common-interceptors `home-page)]
+;;               ["/about" :get (conj common-interceptors `about-page)]
+;;               ["/" :post `create]})
 
 ;; Map-based routes
 ;(def routes `{"/" {:interceptors [(body-params/body-params) http/html-body]
@@ -29,10 +39,11 @@
 ;                   "/about" {:get about-page}}})
 
 ;; Terse/Vector-based routes
-;(def routes
-;  `[[["/" {:get home-page}
-;      ^:interceptors [(body-params/body-params) http/html-body]
-;      ["/about" {:get about-page}]]]])
+(def routes
+  `[[["/" {:get home-page}
+      ^:interceptors [(body-params/body-params) http/html-body]
+      ["/about" {:get about-page}]
+      ["/" {:post create}]]]])
 
 
 ;; Consumed by pedestal-sample-project.server/create-server

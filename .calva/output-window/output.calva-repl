@@ -1,0 +1,391 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+; Execution error (FileNotFoundException) at pedestal-sample-project.views.index/eval6022$loading (form-init8462776448887507692.clj:1).
+; Could not locate ring/util/anti_forgery__init.class, ring/util/anti_forgery.clj or ring/util/anti_forgery.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉pedestal-sample-project.views.index꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+; Execution error (FileNotFoundException) at pedestal-sample-project.views.index/eval5777$loading (form-init9461961486045056082.clj:1).
+; Could not locate ring/util/anti_forgery__init.class, ring/util/anti_forgery.clj or ring/util/anti_forgery.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉pedestal-sample-project.views.index꞉> 
+; Execution error (FileNotFoundException) at pedestal-sample-project.views.index/eval6714$loading (form-init9461961486045056082.clj:1).
+; Could not locate ring/util/anti_forgery__init.class, ring/util/anti_forgery.clj or ring/util/anti_forgery.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+clj꞉pedestal-sample-project.views.index꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+nil
+clj꞉pedestal-sample-project.views.index꞉> 
+nil
+clj꞉pedestal-sample-project.views.index꞉> 
+; Syntax error compiling at (src/pedestal_sample_project/views/index.clj:21:39).
+; Unable to resolve symbol: hc in this context
+clj꞉pedestal-sample-project.views.index꞉> 
+; Syntax error macroexpanding clojure.core/ns at (src/pedestal_sample_project/views/index.clj:1:1).
+; ((:require [pedestal-sample-project.views.layout :as layout] [hiccup.core :as [hc]] [hiccup.page :as hcp-page] [hiccup.form :as hcp-form] [ring.util.anti-forgery :as anti-forgery])) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+clj꞉pedestal-sample-project.views.index꞉> 
+; Execution error (IllegalAccessError) at pedestal-sample-project.views.index/eval8623$loading (form-init5413846185323290627.clj:1).
+; hc does not exist
+clj꞉pedestal-sample-project.views.index꞉> 
+nil
+clj꞉pedestal-sample-project.views.index꞉> 
+nil
+clj꞉pedestal-sample-project.models.migration꞉> 
+nil
+clj꞉pedestal-sample-project.models.models꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+#'pedestal-sample-project.models.models/all
+clj꞉pedestal-sample-project.models.models꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.9.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.27.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉pedestal-sample-project.server꞉> 
+; Jack-in done.
+clj꞉pedestal-sample-project.server꞉> 
+(def serv (run-dev))
+
+Creating your [DEV] server...
+#'pedestal-sample-project.server/serv
+clj꞉pedestal-sample-project.server꞉> 
+#'pedestal-sample-project.views.layout/layouts
+clj꞉pedestal-sample-project.views.layout꞉> 
+#'pedestal-sample-project.views.layout/layouts
+clj꞉pedestal-sample-project.views.layout꞉> 
+#'pedestal-sample-project.service/home-page
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.models.models/create
+clj꞉pedestal-sample-project.models.models꞉> 
+#'pedestal-sample-project.service/create
+clj꞉pedestal-sample-project.service꞉> 
+(create 'hahaha')
+; Execution error (ClassCastException) at pedestal-sample-project.service/create (form-init15336980215394578797.clj:22).
+; class clojure.lang.Symbol cannot be cast to class java.lang.CharSequence (clojure.lang.Symbol is in unnamed module of loader 'app'; java.lang.CharSequence is in module java.base of loader 'bootstrap')
+clj꞉pedestal-sample-project.service꞉> 
+(create "hahaha")
+{:status 302, :headers {"Location" "/"}, :body ""}
+clj꞉pedestal-sample-project.service꞉> 
+; Execution error (ArityException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Wrong number of args (0) passed to: clojure.lang.Symbol
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+; Syntax error reading source at (REPL:46:34).
+; Map literal must contain an even number of forms
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.service/create
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.service/create
+clj꞉pedestal-sample-project.service꞉> 
+(create "hihi")
+{:status 302, :headers {"Location" "/"}, :body ""}
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/create
+clj꞉pedestal-sample-project.service꞉> 
+(create "hi")
+{:status 302, :headers {"Location" "/"}, :body ""}
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.service/routes
+clj꞉pedestal-sample-project.service꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/display-index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/index
+clj꞉pedestal-sample-project.views.index꞉> 
+#'pedestal-sample-project.views.index/form-format
+clj꞉pedestal-sample-project.views.index꞉> 

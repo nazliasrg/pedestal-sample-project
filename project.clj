@@ -8,6 +8,9 @@
                  [org.clojure/java.jdbc "0.6.1"]
                  [mysql/mysql-connector-java "8.0.28"]
                  [hiccup "1.0.5"]
+                 [ring/ring-jetty-adapter "1.9.4"]
+                 [ring/ring-anti-forgery "1.3.0"]
+                 [ring/ring-defaults "0.3.2"]
                  ;; Remove this line and uncomment one of the next lines to
                  ;; use Immutant or Tomcat instead of Jetty:
                  [io.pedestal/pedestal.jetty "0.5.10"]
