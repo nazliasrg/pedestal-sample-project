@@ -1,8 +1,5 @@
 (ns pedestal-sample-project.views.layout
-  (:require [io.pedestal.http :as http]
-            [io.pedestal.http.route :as route]
-            [io.pedestal.http.body-params :as body-params]
-            [ring.util.response :as ring-resp]
+  (:require [ring.util.response :as ring-resp]
             [hiccup.core :as hcp-core]
             [hiccup.page :as hcp-page]))
 
@@ -34,7 +31,7 @@
   (ring-resp/response (hcp-page/html5
                        {:lang "en"}
                        (hcp-core/html
-                        
+
                         [:head (header-components title)]
 
                         [:body
@@ -42,17 +39,16 @@
                           {:class "container"}
                           headers]
                          [:br]
-                         [:div 
+                         [:div
                           {:class "container"}
                           [:div {:class "row"}
+                           [:div {:class "col-md-3"}]
+                           [:div {:class "col-md-6"}
+                            inputan]
+                           [:div {:class "col-md-3"}]]
+                          [:div {:class "row mt-5"}
                            [:div {:class "col-md-2"}]
                            [:div {:class "col-md-8"}
-                            inputan]
-                           [:div {:class "col-md-2"}]]
-                          [:div {:class "row mt-4"}
-                           [:div {:class "col-md-1"}]
-                           [:div {:class "col-md-10"}
                             body]
-                           [:div {:class "col-md-1"}]]
-                          (script-components)]
-                         ]))))
+                           [:div {:class "col-md-2"}]]
+                          (script-components)]]))))
